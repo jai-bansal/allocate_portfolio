@@ -1,5 +1,5 @@
 # This script computes the number of shares of each asset necessary to achieve a target portfolio allocation when adding additional funds:
-# This script requires the user to input desired assets, target portfolio allocation, and current shares owned:
+# This script requires the user to input desired assets, target portfolio allocation, current shares owned, and funds to be added to portfolio:
 
 # PREP:
 
