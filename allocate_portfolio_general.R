@@ -1,5 +1,7 @@
-# This script computes the number of shares of each asset necessary to achieve a target portfolio allocation when adding additional funds:
-# This script requires the user to input desired assets, target portfolio allocation, current shares owned, and funds to be added to portfolio:
+# This script computes the number of shares of each asset necessary to achieve 
+# a target portfolio allocation when adding additional funds:
+# This script requires the user to input desired assets, target portfolio allocation, 
+# current shares owned, and funds to be added to portfolio:
 
 # PREP:
 
@@ -54,7 +56,8 @@ current_shares = c()
 # COMPUTE CURRENT PORTFOLIO VALUE:
   
   # Create data table with portfolio information:
-  portfolio = data.table(assets = assets, target_percentages = target_percentages, current_shares = current_shares, current_prices = current_prices)
+  portfolio = data.table(assets = assets, target_percentages = target_percentages, 
+                         current_shares = current_shares, current_prices = current_prices)
   rm(assets, target_percentages, current_shares, current_prices)
   
   # Compute equity for each asset:
