@@ -4,7 +4,7 @@ This project provides scripts (in R and Python) to compute the shares needed to 
 #### Motivation:
 I wrote this project to quickly compute how many shares I need to buy when adding funds to my investment portfolio.
 
-### Running Scripts:
+#### Running Scripts:
 The scripts CANNOT be run out of the box. User input is required at 4 places:
 'assets':                 specifying assets in target portfolio
 'target_percentages':     specifying desired percentages of assets in 'assets'
