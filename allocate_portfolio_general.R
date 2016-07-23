@@ -6,7 +6,7 @@
 # PREP:
 
   # Load needed packages:
-  library(rvest)
+  library(quantmod)
   library(data.table)
 
 # DEFINE TARGET PORTFOLIO ALLOCATION:
@@ -33,25 +33,22 @@ current_shares = c()
 # CURRENT PRICES:
 # Obtain current prices of assets specified in 'CURRENT PORTFOLIO':
 # Results are stored in the vector 'current_prices':
-# This section uses web scraping, which I think is limited to some number of requests per day:
 
   # Create empty (for now) 'current_prices' vector:
   current_prices = c()
   
-  # Scrape prices for assets in 'assets':
+  # Get prices for assets in 'assets':
   for (i in assets)
     {
   
-      # Identify page with relevant asset price:
-      # This script uses Yahoo Finance price quotes:
-      page = html(paste0('https://finance.yahoo.com/q?s=', i))
+      # Get last price for 'i' using 'quantmod' package.
+      price = getQuote(tolower(i))$Last
       
-      # Scrape price:
-      price = as.numeric(html_text(html_node(page, paste0('#yfs_l84_', tolower(i)))))
+      # Add 'price' to 'current_prices'.
       current_prices = c(current_prices, price)
 
   }
-  rm(i, page, price)
+  rm(i, price)
   
 # COMPUTE CURRENT PORTFOLIO VALUE:
   
