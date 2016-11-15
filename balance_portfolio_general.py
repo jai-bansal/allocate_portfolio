@@ -104,8 +104,5 @@ portfolio['shares_to_buy'] = portfolio.ideal_shares - portfolio.current_shares
 portfolio['current_percentage'] = 100 * portfolio.current_equity / sum(portfolio.current_equity)
 portfolio['ideal_percentage'] = 100 * portfolio.ideal_equity / sum(portfolio.ideal_equity)
 
-# Round 'portfolio.current_percentage' and 'porfolio.ideal_percentage'.
-#portfolio.current_percentage = pd.round(portfolio.current_percentage)
-  
 # Compute money that will be leftover after buying 'portfolio$shares_to_buy'.
 leftover = to_add - sum(portfolio.current_prices * portfolio.shares_to_buy)
